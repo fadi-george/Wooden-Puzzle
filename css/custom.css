@@ -1,0 +1,189 @@
+/* CS560 Fadi George */
+body{
+	background: #E8E8E8;
+}
+#puzzleBoard{
+	width: 520px;
+	height: 420px;
+	padding: 10px;
+	line-height: 0px;
+}
+#moveList{
+	width: 220px;
+	height: 420px;
+	padding: 10px;
+	margin-left: 30px;
+	overflow-y: scroll;
+}
+.moveCardTitle{
+	font-weight: normal;
+	font-size: 20px;
+  text-align: left;
+  margin-top: -12px;
+  color: rgb(200, 200, 200);
+	font-family: 'Roboto', sans-serif;
+}
+.moveListItem{
+	margin-bottom: 12px;
+	transition: all 4s ease;
+	opacity: 1;
+}
+.moveNumber{
+	display: inline-block;
+  font-weight: normal;
+  font-size: 12px;
+	color: rgb(157, 157, 157);
+  vertical-align: top;
+  padding-top: 7px;
+  text-align: left;
+	padding-right: 5px;
+}
+.miniBlock{
+	display: inline-block;
+  float: left;
+  margin-top: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.moveItem{  display: inline-block;
+  /* background: rgb(232, 232, 232); */
+  /* border-radius: 4px; */
+  height: 32px;
+  /* width: 84%; */
+  /* border: 1px solid rgb(208, 190, 190); */
+  line-height: 30px;
+  text-align: right;
+  padding-right: 6px;
+  color: rgb(147, 147, 147);
+  font-weight: 100;
+  margin-right: 0px;
+  vertical-align: middle;
+  margin-top: -2px;
+	font-size: 11px;
+  /* margin-right: 0px; */
+  padding-left: 6px;
+}
+.moveContain{
+	display: inline-block;
+	border: 1px solid rgb(208, 204, 204);
+	background: rgb(244, 244, 244);
+	border-radius: 4px;
+	height: 30px;
+	float: right;
+	width: 156px;
+  text-align: right;
+}
+.size1by1{
+  height: 100px;
+	width: 100px;
+}
+.size1by2{
+  height: 100px;
+  width: 200px;
+}
+.size2by2{
+  height: 200px;
+  width: 200px;
+}
+.size2by1{
+  height: 200px;
+  width: 100px;
+}
+.pBlock{
+	display: inline-block;
+	position: absolute;
+	border: 0px solid white;
+	box-shadow: inset 0px 0px 12px 2px rgba(0, 0, 0, 0.21);
+	transition: all .4s ease;
+	z-index: 2;
+}
+.emptyBlock{
+	box-shadow: none;
+	z-index: 1 !important;
+}
+
+/* Movement Transforms */
+.moveDown{
+	transform: translate(0,100px);
+}
+.moveUp{
+	transform: translate(0,-100px);
+}
+.moveLeft{
+	transform: translate(-100px,0);
+}
+.moveRight{
+	transform: translate(100px,0);
+}
+.customRow{
+	margin-top: 30px;
+}
+.speedUP{
+	display: block;
+	text-align: center;
+	background: rgb(189, 189, 189);
+	width: 38px;
+	height: 38px;
+	color: rgb(255, 255, 255);
+	padding: 10px 7px 3px 10px;
+	margin: 0 auto;
+	border-radius: 4px;
+	font-size: 18px;
+}
+.inLineCards{
+	display: inline-block;
+}
+.centeredCards{
+	display: table;
+  margin: 0 auto;
+	margin-top: 30px;
+}
+
+#solveButton{
+	position: absolute;
+	left: 50%;
+	margin-top: 10px;
+  background: linear-gradient(0deg,#F1F1F1,#FFFFFF);
+  width: auto;
+	height: 36px;
+	border-radius: 18px;
+	padding: 11px 14px;
+	font-size: 16px;
+	color: #38A35A;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	cursor: pointer;
+}
+#solveButton i{
+	float: left;
+}
+#solveButton span{
+	float: right;
+	margin-top: -3px;
+	padding-left: 9px;
+}
+#solveButton:hover{
+  background: linear-gradient(0deg,#D2D2D2,#FFFFFF);
+}
+
+#moveList::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+#moveList::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+		width: 6px;
+		margin: 10px 10px 10px 0px;
+}
+
+/* Handle */
+#moveList::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(131, 131, 131);
+		box-shadow: none;
+}
+#moveList::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4);
+}
